@@ -80,6 +80,12 @@ public class MoneyTest {
 		if(newMoney.getAmount() != 100) {
 			fail("Add() method failed");
 		}
+		
+		Money newMoney2 = EUR20.add(EUR10);
+		if(newMoney2.getAmount() != 30) {
+			fail("Add() method failed");
+		}
+		
 	}
 
 	@Test
@@ -87,6 +93,11 @@ public class MoneyTest {
 		Money newMoney = EUR20.subtract(EUR10);
 		if(newMoney.getAmount() != 10) {
 			fail("Subtract() method failed");
+		}
+		
+		Money newMoney2 = EUR20.subtract(EUR10);
+		if(newMoney2.getAmount() != 10) {
+			fail("Add() method failed");
 		}
 	}
 
